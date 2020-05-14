@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="{{ direction }}" lang="{{ lang }}">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ title }}</title>
+  <base href="{{ base }}" />
+  {% if description %}
+  <meta name="description" content="{{ description }}" />
+  {% endif %}
+  {% if keywords %}
+  <meta name="keywords" content="{{ keywords }}" />
+  {% endif %}
+  <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+  <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <!--<link href="catalog/view/theme/straw/stylesheet/stylesheet.css" rel="stylesheet">-->
+  {% for style in styles %}
+  <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+  {% endfor %}
+  <link href="catalog/view/javascript/jquery/magnific/magnific-popup.css" rel="stylesheet">
+  <link href="catalog/view/theme/straw/stylesheet/stylesheet.css" rel="stylesheet">
+  {% for script in scripts %}
+  <script src="{{ script }}" type="text/javascript"></script>
+  <script src="catalog/view/theme/straw/js/theme.js" type="text/javascript"></script>
+  <script src="catalog/view/theme/straw/libs/equalheights/equalheights.js" type="text/javascript"></script>
+  <script src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js" type="text/javascript"></script>
+  {% endfor %}
+  <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+  {% for link in links %}
+  <link href="{{ link.href }}" rel="{{ link.rel }}" />
+  {% endfor %}
+  {% for analytic in analytics %}
+  {{ analytic }}
+  {% endfor %}
+</head>
+
+<body>
+  <header>
+    <!--<div class="container">
+          <div class="row">
+             <div class="col-md-3 col-sm-4">
+               <div id="logo" class="logo">
+               {% if logo %}
+
+                 <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}"
+                     class="img-responsive" />
+                   <h1>{{ name }}</h1>
+                 </a>
+                 {% else %}
+                 <h1>
+                   <a href="{{ home }}">{{ name }}
+                   </a>
+                 </h1>
+                 {% endif %}
+                </div>
+               </div>-->
+
+
+
+      <div class="container">
+          <div class="row">            
+               {% if logo %}
+               <div class="col-md-1"><a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" 
+                     class="img-responsive" /></a></div> <!--TODO MINE fix-->
+               <div class="col-md-2 namestore"><a href="{{ home }}">
+                   <h1>{{ name }}</h1>
+                 </a></div>                 
+                 {% else %}
+                 <div class="col-md-3 col-sm-4">
+                   <div id="logo" class="logo">
+                 <h1>
+                   <a href="{{ home }}">{{ name }}
+                   </a>
+                 </h1>
+                  </div>
+               </div>
+                 {% endif %}
+               
+
+
+            <div class="col-md-6 col-sm-5">
+              {{ search }}
+            </div>
+            <ul class="col-md-3 col-sm-3">      
+              <li class="dropdown"><a href="{{ account }}" title="{{ text_account }}" class="dropdown-toggle"
+                    data-toggle="dropdown"><i class="fa fa-user"></i> 
+                    <span class="hidden-xs hidden-sm hidden-md">{{ text_account }}</span> <span class="caret"></span></a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    {% if logged %}
+                    <li><a href="{{ account }}">{{ text_account }}</a></li>
+                    <li><a href="{{ order }}">{{ text_order }}</a></li>
+                    <li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
+                    <li><a href="{{ download }}">{{ text_download }}</a></li>
+                    <li><a href="{{ logout }}">{{ text_logout }}</a></li>
+                    {% else %}
+                    <li><a href="{{ register }}">{{ text_register }}</a></li>
+                    <li><a href="{{ login }}">{{ text_login }}</a></li>
+                    {% endif %}
+                  </ul>
+              </li>
+              <li class="header-phone">
+              {{ telephone }}
+              </li>        
+            </ul>      
+          </ul>
+</header>
+
+
+
+
+  <nav id="top" class="top-menu">
+    <div class="container">
+        <div class"row">
+          <div class="col-sm-9">        
+          <nav id="menu" class="navbar">
+            <div class="navbar-header"><span class="toggle-top-text hidden-lg hidenn-md hidden-sm"> {{ text_information }}:</span>
+              <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse"
+                data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+              <ul class="nav navbar-nav">
+                  {% if informations %}
+                 <ul class="nav navbar-nav">
+                   {% for information in informations %}
+                 <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+                {% endfor %}
+                {% endif %}
+                <li><a href="/skidki">Продукция</a></li>
+                <li><a href="{{ contact }}">Контакты</a></li>
+                 </ul>
+              </ul>
+            </div>
+          </nav>         
+          </div>
+          <div class="col-sm-3 cart-wrapper">{{ cart }}</div>
+        </div>
+    {{ currency }}
+    {{ language }}
+    
+    </div>
+  </nav>
+  {{ menu }}
+
+
+
+
+ 

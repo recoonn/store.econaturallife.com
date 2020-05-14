@@ -1,0 +1,648 @@
+@import "bourbon"
+@import "vars"
+@import "fonts"
+@import "catalog/view/theme/straw/stylesheet/mfp-zoom-in"
+
+//Custom styles here
+
+
+body
+    font-size: 16px
+    min-width: 320px
+    position: relative
+    line-height: 1.6 
+    overflow-x: hidden
+    font-family: MyriadSetProText, sans-serif
+    
+
+header 
+    background-color: #333333
+    padding: 15px 
+    .dropdown
+        display: inline
+        a.dropdown-toggle
+            color: #999999
+            font-size: 14px
+            margin-top: 3px 0 0
+            padding: 8px 0 4px
+            &:hover, &:active, &:focus
+                color: #ffffff
+                text-decoration: none
+            
+
+
+
+ul.col-md-3
+    margin: 0
+    padding: 0
+
+.dropdown-menu
+    border-radius: 0
+    border: none
+    margin-top: 25px
+    left: 0 
+    >li 
+        >a
+            padding: 5px 20px 
+            &:focus, &:hover
+                background-color: $accent2
+                color: #ffffff
+                
+                
+
+
+.header-phone
+    display: inline
+    color: #ffffff
+    float: right
+    font-size: 20px
+    padding-left: 35px
+    border-left: 3px solid #ffffff
+    padding-top: 1px
+            
+    
+
+
+.logo
+    margin-top: 5px
+    margin-bottom: 5px
+    img 
+        width: 55px
+        
+.namestore
+    margin-left: 0px
+    padding-left: 0px
+
+    > a
+        > h1 
+            padding-right: 25px
+            padding-left: 0px
+            margin: auto
+            padding-top: 10px
+             
+            font-size: 20px
+            font-style: italic
+            color: #ffffff
+        
+
+.form-control:focus
+    box-shadow: none 
+
+.form-control
+    border-radius: 0
+    font-family: MyriadSetProThin, sans-serif
+    
+    
+
+
+
+#search
+    width: 100%
+    .form-control
+        padding: 5px 16px
+        height: 34px
+        border: none
+           radius:  0px
+        background-color: #444444
+        font: 
+           style: Italic 
+           size: 13px
+           color: $accent
+        transition: background-color .25s ease, box-shadow .25s ease
+        box-shadow: transparent 0 0 0 1px
+        &:focus, &:hover
+            background-color: #555
+            box-shadow: #777 0 0 0 1px insert
+            color: $accent
+
+    .input-group-btn
+        .btn
+            padding: 9px 10px
+            border: none
+              radius:  0px 
+            background-color: transparent
+            color: #999
+            font-size: 13px
+            right: 45px
+            
+
+.navbar-collapse.in
+    overflow-y: unset
+
+
+.top-menu
+    margin-bottom: 40px
+    border-bottom: 1px solid #ededed
+    .cart-wrapper
+        .dropdown-menu
+            padding: 15px
+            width: 460px
+            .table-striped
+                img
+                    width: 47px
+                    height: 47px
+
+    a
+        color #333
+    .navbar
+        margin-bottom: 0
+        font-size: 17px
+        &-nav
+            > li
+                > a
+                    padding-top: 14px
+                    padding-bottom: 12px
+                    color: $accent
+                    &:hover, &:focus
+                        background: #ededed
+                        
+#cart
+    button
+        background: $accent3
+        color: #ffffff
+        border-radius: 0
+        padding-top: 15px
+        padding-bottom: 12px
+        border: 0
+        font-family: MyriadSetProThin, sans-serif
+        font-size: 18px
+    .btn-danger
+        border-radius: 10em
+        &:hover
+            background-color: #c40505
+
+.cart-wrapper
+    padding-left: 15px
+    .dropdown-menu
+        padding: 15px
+        
+.toggle-top-text
+    text-transform: uppercase
+    display: inline-block
+    color: $accent
+    font-family: MyriadSetProSemiBold, sans-serif
+    padding: 15px 0
+    
+.navbar-toggle
+    margin-right: 0
+
+
+.swiper-viewport 
+    border: none
+    box-shadow: none
+    border-radius: 0px
+    margin-bottom: 40px
+
+.swiper-pagination-bullet
+    display: none
+
+.swiper-button-next, .swiper-button-prev
+    &:before
+        font-size: 20px
+        opacity: .4
+
+
+.list-group-item
+    padding: 15px 15px
+    border-color: $accent2
+    transition: background .25s ease, color .25s ease, text-indent .25s ease, background-color .25s ease
+    border: 
+        bottom: 1px transparent solid  
+        top: 1px transparent solid  
+    &:first-child
+        border-top: 1px $accent2 solid  
+        border-radius: 0px   
+    &:last-child
+        border-bottom: 1px $accent2 solid  
+        border-radius: 0px
+
+a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover
+    background-color: $accent2
+    border-color: $accent2
+    color: #ffffff
+    text-indent: 25px
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover
+    background-color: darken($accent2,10%)
+    border-color: darken($accent2,10%)
+    color: #ffffff
+    text-indent: 25px
+    
+#content
+    h3
+        text-align: center
+        font-size: 30px
+        font-family: MyriadSetProThin, sans-serif
+        margin-bottom: 45px
+
+
+.product-layout
+    .product-thumb
+        border: transparent 1px solid
+        transition: box-shadow .25s ease
+        padding: 40px 0px 0px
+        text-align: center
+        &:hover
+            box-shadow: $accent3 0 0 0 1px inset
+        .price
+            font-size: 25px
+            font-family: MyriadSetProThin, sans-serif
+            .price-new
+                font-size: 45px                
+                color: $accent
+            .price-old
+                font-size: 35px                
+                text-decoration: line-through
+
+        .image
+            padding: 0px 25px
+        .caption
+            padding: 0px 25px
+        h4
+            margin-top: 20px
+            a
+                color: #333333
+                font-size: 22px
+                font-family: MyriadSetProThin, sans-serif
+                &:hover
+                    text-decoration: none
+                    font-style: italic
+                    color: $accent        
+        .button-group
+            > *
+                margin-top: 3px
+                display: none
+                &:first-child
+                    display: block
+                &.toclick
+                    display: block
+        button, .button
+            &.toclick
+                font-size: 14px
+                color: #ffffff
+                background-color: $accent
+                padding: 10px 0px
+            border: none
+            background-color: $accent2
+            color: #ffffff
+            width: 100%
+            padding: 8px 0px
+            font-size: 18px
+            transition: background-color .25s ease
+            outline: none
+            &:hover, &:focus                
+                background-color: lighten($accent2, 5%)
+                text-decoration: none
+            &:active
+                background-color: darken($accent2, 5%)
+                text-decoration: none
+            .fa
+                display: none
+
+.alert
+    border-radius: 0px
+
+
+#column-left
+    > div
+        > blockquote
+            border: none
+            padding: 0px
+            margin-top: 45px
+            color: #777777
+            line-height: 1.3
+            ul
+                padding: 0px
+                margin: 0px
+                list-style-type: none
+                li
+                    //border: 1px $accent solid
+                    margin-bottom: 20 px
+                    padding: 15px 20px
+                    background-color: transparent
+                    transition: border-color .2s ease, background-color .4s ease, color .25s ease, transform .5s ease
+                    font-size: 17px
+                    padding-left: 50px
+                    position: relative
+
+                    &:nth-child(1)
+                        > span
+                            color: #921AD3
+                        &:hover
+                            background-color: #921AD3
+                            border-color: #921AD3
+
+                    &:nth-child(2)
+                        > span
+                            color: #f53737
+                        &:hover
+                            background-color: #f53737
+                            border-color: #f53737
+
+                    &:nth-child(3)
+                        > span
+                            color: $accent
+                        &:hover
+                            background-color: $accent
+                            border-color: $accent
+
+
+                    &:nth-child(4)
+                        > span
+                            color: #0079ff
+                        &:hover
+                            background-color: #0079ff
+                            border-color: #0079ff
+
+                        
+                    &:hover
+                        border-color: #789454
+                        background-color: #be1e1e
+                        color: #ffffff
+                        transform: translateY(-5px)
+                        > span
+                            color: #ffffff
+                    > span
+                        display: block
+                        font-size: 18px
+                        margin-bottom: 10px
+                        font-family: MyriadSetProSemiBold, sans-serif
+                        white-space: nowrap
+                        > span
+                            position: absolute
+                            left: 0
+                            font-size: 18px
+                            left: 25px
+
+.mfp-content
+    .product-popup
+        display: block
+    .pp-img-wrap
+        text-align: center
+        img
+            max-width: 95%
+            //width: 80px
+            margin-top: 20px
+    .pp-content
+        h3
+            text-align: center
+            font-family: MyriadSetProThin, sun-serif
+            margin: 30px 0px 15px
+        p
+            text-align: center
+            .price-old
+                text-decoration: line-through
+                font-size: 35px
+
+
+
+
+.product-popup
+    background-color: #ffff
+    max-width: 320px
+    position: relative
+    margin: auto
+    padding: 15px
+    display: none
+    .success
+         position: absolute
+         z-index: 1
+         top: 0
+         left: 0
+         right: 0
+         bottom: 0
+         background-color: #fff
+         text-align: center
+         text-transform: uppercase
+         padding: 80% 10% 10%
+         display: none
+
+    form
+        position: relative
+        margin-top: 25px
+        
+    h2
+        margin:
+            top: 15px
+            bottom: 10px
+        font-size: 28px
+        text-align: center
+        font-family: MyriadSetProThin, sans-serif
+    p
+        text-align: center
+    .btn
+        position: absolute
+        right: 0
+        top: 0
+
+.callback-form
+    .success
+        padding-top: 28%
+
+
+.main-footer
+    margin-top: 60px
+    .footer-cnt
+        background-color: #333333
+        padding: 7px 0px
+        > .container
+            > .row
+                >div:last-child
+                    border-left: #444 3px solid
+    .footer-mnu
+        ul
+            margin: 0px
+            padding: 0px
+            li
+                display: inline-block
+                font-size: 14px
+                a
+                    color: #999999
+                    display: block
+                    padding: 10px 14px
+                    transition: all .25s ease
+                    &:hover, &:focus
+                        color: #b6b6b6
+                        background-color: transparent
+                        text-decoration: underline
+
+.nav-social
+    padding: 6px 0px
+    text-align: right
+    ul, li
+        margin: 0
+        padding: 0
+    li
+        display: inline-block
+        a
+            color: $accent
+            font-size: 35px
+            padding: 0px 5px
+            transition: color .25s ease
+            &:hover
+                color: lighten($accent, 25%)
+
+.footer-phone
+    background-color: #262626
+    color: #8c8c8c
+    padding: 15px 0px 30px
+    .site-phone
+        font-size: 22px
+        color: #8c8c8c
+        margin-top: 8px
+    .site-phone_wrap
+        text-align: center
+        font-family: MyriadSetProThin, sans-serif
+    .callback
+        color: $accent
+        border-bottom: 1px dashed #999999
+        transition: border-bottom .25s ease, color .25s ease
+        &:hover, &:focus
+            color: darken($accent, 12%)
+            text-decoration: none
+
+.btn
+    border-radius: 0
+    transition: background-color .25s ease, background-color .25s ease
+
+
+
+.btn-primary
+    background-color: $accent   
+    border-color: $accent
+    border-radius: 0
+    &:hover
+        background-color: $accent2
+        border-color: $accent2
+                     
+.breadcrumb
+    display: none
+
+#content
+    h1
+        margin-top: 0px
+        margin-bottom: 20px
+        font-family: MyriadSetProThin, sans-serif
+
+[data-original-title]
+    display: none
+
+.form-group
+    .input-group
+        .input-group-sm
+            color: #ffffff
+            background-color: $accent
+            border-color: $accent
+            font-family: MyriadSetProThin, sans-serif
+
+.input-group-addon
+    color: #ffffff
+    background-color: $accent
+    border-radius: 0px
+    border-color: $accent
+    font-family: MyriadSetProThin, sans-serif
+
+#compare-total
+    font-family: MyriadSetProThin, sans-serif
+    color: $accent
+#input-limit
+    font-family: MyriadSetProThin, sans-serif
+    color: $accent
+    border-color: #ffffff
+#input-sort
+    font-family: MyriadSetProThin, sans-serif
+    color: $accent
+
+
+#input-sort
+    border-radius: 0px
+    border-color: #ffffff
+    font-family: MyriadSetProThin, sans-serif
+    
+
+.img-thumbnail
+    border: none
+
+.input-group-sm>.form-control, .input-group-sm>.input-group-addon, .input-group-sm>.input-group-btn>.btn
+    border-radius: 0px
+
+.cat-head
+    border-bottom: $accent2 2px solid
+    margin-bottom: 30px
+
+.pagination>li:first-child>a, .pagination>li:first-child>span,
+.pagination>li:last-child>a, .pagination>li:last-child>span
+    border-radius: 0px
+
+.pagination>.active>a, 
+.pagination>.active>a:focus,
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus, 
+.pagination>.active>span:hover
+    background-color: $accent2
+    border-color: $accent2
+
+.pagination>li>a, .pagination>li>span
+    border-color: $accent2
+    color: $accent2 
+
+
+.list-unstyled
+    > li
+        .spec-price
+            color: $accent
+
+.price-wrap
+    margin-top: 30px
+    .def-price
+        margin-top: 30px
+        font-size: 75px
+        color: $accent2
+#product
+    margin-top: 30px
+    .control-label
+        font-weight: normal
+        margin-bottom: 0px
+        font-size: 14px
+.product-count
+    position: relative
+    top: -13px
+
+.fa-stack-1x
+    color: $accent
+    font-size: 1.5em
+
+.fa-stack-2x
+    color: $accent2
+    font-size: 1.5em
+#tab-description
+    padding: 30px 0px
+    text-indent: 50px
+.nav-tabs
+    > li
+        > a
+            border-radius: 0px
+
+.product-page-image
+    list-style-type: none
+    //padding: 0px
+    //margin: 0px
+    .thumbnail
+        border: none
+
+
+#information-contact
+    h3
+        text-align: left
+        font-family: MyriadSetProThin, sans-serif
+.panel
+    border-radius: 0px
+    border-color: $accent2
+    font-size: 18px
+    border: none
+    
+    
+
+
+@import "media"
